@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="debug">
+  <header class="container-fluid">
+    <section class="row justify-content-between align-items-center">
+      <div class="col-4">
+        <form class="" onsubmit="addPlayer(event)">
+          <div class="d-flex">
+            <input placeholder="Name" type="text" name="name" id="name"></input>
+            <button class="btn-special" type="submit">
+              ADD PLAYER
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col-3 d-flex justify-content-end m-3">
+        <button onclick="reset()" class="btn button reset">RESET</button>
+      </div>
+    </section>
+  </header>
+
+  <main class="container-fluid">
+
+    <!-- SECTION SCORE -->
+    <section class="row justify-content-center align-items-center" id="players">
+    </section>
+
+    <!-- SECTION AWAY -->
+    <!-- <div class="col-6 text-center p-3">
+      <div class="score-board">
+        <p>HOME</p>
+        <p class="score">0<span id="homeScore">0</span></p>
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <button onclick="addScore('home', 1)" class="btn button score-button my-3">HOME +1</button>
+        <button onclick="addScore('home', 3)" class="btn button score-button">HOME +3</button>
+      </div>
+    </div>
+    <div class="col-6 text-center px-3">
+      <p>AWAY</p>
+      <p class="score">0<span id="awayScore">0</span></p>
+    </div>
+    <section class="row d-flex justify-content-center mx-5 px-5">
+      <div class="col-5 d-flex flex-column align-items-center">
+        <button onclick="addScore('away', 1)" class="btn button score-button my-3">AWAY +1</button>
+        <button onclick="addScore('away', 3)" class="btn button score-button">AWAY +3</button>
+      </div>
+    </section> -->
+  </main>
+
+  <footer class="container-fluid">
+
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
