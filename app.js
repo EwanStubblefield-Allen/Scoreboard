@@ -44,8 +44,9 @@ function drawPlayers() {
       <p class="score">${player.score}</p>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <button onclick="addScore('${player.id}', 1)" class="btn button score-button my-3">${player.name} +1</button>
-      <button onclick="addScore('${player.id}', 3)" class="btn button score-button">${player.name} +3</button>
+      <button onclick="addScore('${player.id}', -1)" class="btn button score-button my-3">${player.name} -1</button>
+      <button onclick="addScore('${player.id}', 1)" class="btn button score-button">${player.name} +1</button>
+      <button onclick="addScore('${player.id}', 3)" class="btn button score-button my-3">${player.name} +3</button>
     </div>
   </div>
     `
